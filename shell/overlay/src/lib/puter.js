@@ -610,9 +610,21 @@ export function setWindowTitle(title) {
   try { if (title && typeof document !== 'undefined') document.title = title; } catch { /* 没有 document */ }
 }
 
-/** 「用此应用打开」是 Puter 桌面的事，这里没有。 */
-export function onLaunchedWithItems() {
-  /* 空操作 */
+/**
+ * 宿主的「文件关联打开」：用户在系统里双击已绑定扩展名的文件，宿主把路径
+ * 投递给本插件（`otools-file-open` 契约：URL 参数 + 投递队列 + 敲门事件，
+ * 见 `otools/openfile.js`）。这里映射成驱动器条目形状，走上游的
+ * `openDriveItems` 路径——与拖放同一套打开逻辑（表格进编辑器、图片进单元格）。
+ * Puter 桌面的「用此应用打开」没有对应物，宿主投递就是它的替身。
+ */
+export function onLaunchedWithItems(handler) {
+  void import('../otools/openfile.js')
+    .then(({ onHostOpenFile }) => onHostOpenFile((entries) => {
+      if (typeof handler === 'function' && entries.length) {
+        handler(entries.map((entry) => ({ path: entry.path, name: entry.name })));
+      }
+    }))
+    .catch(() => { /* 浏览器直开 dist 时没有宿主投递，静默 */ });
 }
 
 /** 接管不了宿主窗口的关闭按钮：返回 false，上游就不会把关闭交给我们。 */

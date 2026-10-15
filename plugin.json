@@ -5,6 +5,12 @@
   "displayNameCN": "表格编辑",
   "entry": "dist/index.html",
   "quickDev": true,
+  "fileAssociations": [
+    { "ext": "xlsx", "desc": "Excel 工作簿", "mime": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" },
+    { "ext": "xlsm", "desc": "Excel 启用宏的工作簿", "mime": "application/vnd.ms-excel.sheet.macroEnabled12" },
+    { "ext": "csv", "desc": "CSV 逗号分隔值", "mime": "text/csv" },
+    { "ext": "ods", "desc": "OpenDocument 表格", "mime": "application/vnd.oasis.opendocument.spreadsheet" }
+  ],
   "hasAd": false,
   "icon": "📊",
   "inPluginPurchase": false,
