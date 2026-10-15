@@ -1,0 +1,29 @@
+{
+  "devUrl": "http://127.0.0.1:5521",
+  "developerName": "jry",
+  "displayName": "Spreadsheet",
+  "displayNameCN": "表格编辑",
+  "entry": "dist/index.html",
+  "quickDev": true,
+  "hasAd": false,
+  "icon": "📊",
+  "inPluginPurchase": false,
+  "key": [
+    "sheet",
+    "excel",
+    "xlsx",
+    "csv",
+    "cell",
+    "formula",
+    "表格",
+    "电子表格",
+    "公式",
+    "数据透视"
+  ],
+  "openInBrowser": false,
+  "packid": "otools-puter-spreadsheet",
+  "screenshots": [],
+  "summary": "Spreadsheet（HeyPuter/everything 的电子表格应用）的 OTools 插件版：公式、图表、数据透视、条件格式与 xlsx 导入导出。表格是本机目录里的普通文件，不走任何云账号。",
+  "uuid": "otools-puter-spreadsheet",
+  "version": "0.1.0"
+}

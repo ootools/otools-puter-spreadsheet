@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Spreadsheet">
+  <defs>
+    <linearGradient id="sheetbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3ecf80"/>
+      <stop offset="1" stop-color="#129a55"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" rx="56" fill="url(#sheetbg)"/>
+  <!-- 表体 -->
+  <rect x="44" y="48" width="168" height="160" rx="14" fill="#ffffff"/>
+  <!-- 表头 -->
+  <path d="M44 62a14 14 0 0 1 14-14h140a14 14 0 0 1 14 14v39H44z" fill="#129a55"/>
+  <!-- 网格线 -->
+  <g stroke="#129a55" stroke-width="5" opacity="0.55">
+    <path d="M100 48v160"/>
+    <path d="M156 48v160"/>
+    <path d="M44 154h168"/>
+  </g>
+  <!-- 选中单元格 -->
+  <rect x="106" y="108" width="44" height="40" fill="#f0a03a"/>
+  <!-- 柱形 -->
+  <rect x="62" y="130" width="30" height="18" rx="4" fill="#129a55"/>
+</svg>
