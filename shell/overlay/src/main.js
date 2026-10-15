@@ -1,12 +1,18 @@
 /**
  * OTools 插件版入口（覆盖上游同名文件）。
  *
- * 与上游 `src/main.js` 唯一的差别是第一行：装 OTools 的语言 / 主题 / 本机文件
- * 三件套（`shell/src/otools/boot.js`）。必须在画第一个界面之前装好，否则界面
- * 会先按英文画一遍再被翻译层翻一遍，看得见闪一下。
+ * 与上游 `src/main.js` 唯一的差别是第一行的位置：这里在样式之后紧接着装
+ * OTools 的语言 / 主题 / 本机文件三件套（`shell/src/otools/boot.js`）。必须
+ * 在画第一个界面之前装好，否则界面会先按英文画一遍再被翻译层翻一遍，
+ * 看得见闪一下。
+ *
+ *注意 `import './styles/index.css'` 这行**必须保留**：整个界面（编辑器、
+ * 功能区、弹层）的样式都挂在这一个入口上，29 个 CSS 文件全靠它注入。
+ * 少了它构建不会报错、只会静默产出一个没有任何样式的界面。
  *
  * 其余启动流程一行未改。
  */
+import './styles/index.css';
 import './otools/boot.js';
 import { el } from './ui/dom.js';
 import { icon } from './ui/icons.js';
