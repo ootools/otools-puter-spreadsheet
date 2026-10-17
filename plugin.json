@@ -31,5 +31,5 @@
   "screenshots": [],
   "summary": "Spreadsheet（HeyPuter/everything 的电子表格应用）的 OTools 插件版：公式、图表、数据透视、条件格式与 xlsx 导入导出。表格是本机目录里的普通文件，不走任何云账号。",
   "uuid": "otools-puter-spreadsheet",
-  "version": "0.1.5"
+  "version": "0.1.6"
 }
