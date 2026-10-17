@@ -15,7 +15,7 @@ import common from './i18n.common.zh-CN.js';
 export default {
   ...common,
 
-        'A beam that tips toward the side with more sub-items. Shows two items.': '一根横梁，向子项更多的一侧倾斜。显示两个项。',
+  'A beam that tips toward the side with more sub-items. Shows two items.': '一根横梁，向子项更多的一侧倾斜。显示两个项。',
   'A bright sheen over the top half': '上半部分带有明亮的光泽',
   'A button cannot be added here: the sheet is protected': '无法在此处添加按钮：工作表已受保护',
   'A circle in four parts, with sub-items in the corners. Shows four items.': '分成四部分的圆，子项位于各个角上。显示四个项。',
